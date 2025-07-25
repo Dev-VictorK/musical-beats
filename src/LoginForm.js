@@ -80,7 +80,7 @@ class LoginForm extends React.Component {
                                         <button className="justify-end text-orange-700 text-sm hover:text-orange-900">
                                             Log in
                                         </button>
-                                    </p> : <p>Don't have an account? <a href="#" className="justify-end text-orange-700 text-sm hover:text-orange-900">Sign Up</a></p>}
+                                    </p> : <p>Don't have an account? <button className="justify-end text-orange-700 text-sm hover:text-orange-900">Sign Up</button></p>}
                             </form>
                         </div>
                     </div>
