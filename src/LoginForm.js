@@ -15,7 +15,7 @@ class LoginForm extends React.Component {
     signUpClick = (e) => {
         e.preventDefault();
         this.setState({ isSignUp: !this.state.isSignUp });
-        setTimeout(() => { this.setState({ showText: !this.state.showText }) }, 800);
+        setTimeout(() => { this.setState({ showText: !this.state.showText }) }, 2000);
     }
     render() {
         const { isSignUp, showText } = this.state;
@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
             <>
                 {/**Image section */}
                 <div className={`overflow-hidden relative rounded-3xl col-start-1 col-span-1 z-20
-                transition-all duration-[2s] ease-in-out ${isSignUp ? "translate-x-full opacity-100" : "translate-x-0 opacity-100"} `}>
+                transition-all duration-[5s] ease-in-out ${isSignUp ? "translate-x-full opacity-100" : "translate-x-0 opacity-100"} `}>
                     <img src={pic} className="w-full h-auto object-cover z-10 " alt="" />
                     <h1 className="absolute top-0 left-0 text-white z-50 m-6 font-normal">Earth-Space Image</h1>
                     <button className="absolute top-0 right-0 m-6 border border-white px-2 py-1 rounded-full text-white text-sm"
@@ -44,7 +44,7 @@ class LoginForm extends React.Component {
 
 
                 {!isSignUp ? (
-                    <div className={`col-start-2 p-4 min-h-full transition-all duration-[2s] ease-in-out z-10
+                    <div className={`col-start-2 p-4 min-h-full transition-all duration-[5s] ease-in-out z-10
                         ${isSignUp ? "translate-x-full opacity-0" : "translate-x-0 opacity-100"}`}>
                         {/**login */}
                         <div className="animate-fade-in w-full">
@@ -62,7 +62,7 @@ class LoginForm extends React.Component {
                                     <>
                                         <input type="password" placeholder="Password"
                                             className="p-2 w-64 border border-gray-500 rounded-md my-1 focus:outline-none focus:border focus:border-orange-500 focus:ring-2 focus:ring-orange-500 hover:border hover:border-orange-200 hover:ring-2 hover:ring-orange-400" />
-                                        <a href="#" className="text-orange-700 text-sm hover:text-orange-900">Forgot Password?</a>
+                                        <button className="text-orange-700 text-sm hover:text-orange-900">Forgot Password?</button>
                                     </>
                                     :
                                     <>
@@ -77,15 +77,15 @@ class LoginForm extends React.Component {
                                     {!showText ? "Login" : "Sign Up"}</button>
                                 {showText ?
                                     <p>Have an account?
-                                        <a href="#" className="justify-end text-orange-700 text-sm hover:text-orange-900">
+                                        <button className="justify-end text-orange-700 text-sm hover:text-orange-900">
                                             Log in
-                                        </a>
+                                        </button>
                                     </p> : <p>Don't have an account? <a href="#" className="justify-end text-orange-700 text-sm hover:text-orange-900">Sign Up</a></p>}
                             </form>
                         </div>
                     </div>
                 ) : (
-                    <div className={`col-start-2 p-4 min-h-full transition-all duration-[2s] ease-in-out 
+                    <div className={`col-start-2 p-4 min-h-full transition-all duration-[5s] ease-in-out 
                         ${isSignUp ? "-translate-x-full opacity-100" : "translate-x-100 opacity-0"}`}>
                         {/**sign up */}
                         <div className="animate-fade-in w-full">
@@ -109,7 +109,7 @@ class LoginForm extends React.Component {
                                         className="p-2 w-64 border border-gray-500 rounded-md my-1 focus:outline-none focus:border focus:border-orange-500 focus:ring-2 focus:ring-orange-500 hover:border hover:border-orange-200 hover:ring-2 hover:ring-orange-400" />
                                 }
                                 {showText ? <></>
-                                    : <a href="#" className="text-orange-700 text-sm hover:text-orange-900">Forgot Password?</a>}
+                                    : <button className="text-orange-700 text-sm hover:text-orange-900">Forgot Password?</button>}
                                 <button className="p-2 border w-64 border-gray-500 rounded-md my-1 px-8 hover:ring-2 hover:ring-orange-500 hover:border hover:border-orange-500">
                                     Log in with Google
                                 </button>
@@ -120,10 +120,10 @@ class LoginForm extends React.Component {
                                 </button>
                                 {showText ?
                                     <p>Have an account?
-                                        <a href="#" className="justify-end text-orange-700 text-sm hover:text-orange-900">
+                                        <button className="justify-end text-orange-700 text-sm hover:text-orange-900">
                                             Log in
-                                        </a>
-                                    </p> : <p>Don't have an account? <a href="#" className="justify-end text-orange-700 text-sm hover:text-orange-900">Sign Up</a></p>}
+                                        </button>
+                                    </p> : <p>Don't have an account? <button className="justify-end text-orange-700 text-sm hover:text-orange-900">Sign Up</button></p>}
 
                             </form>
                         </div>

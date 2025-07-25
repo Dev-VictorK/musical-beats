@@ -52,7 +52,7 @@ class SignUp extends React.Component {
                                         className="p-2 w-64 border border-gray-500 rounded-md my-1 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500" />
                                     <input type="password" placeholder="Password"
                                         className="p-2 w-64 border border-gray-500 rounded-md my-1 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500" />
-                                    <a href="#" className="text-orange-700 text-sm hover:text-orange-900">Forgot Password?</a>
+                                    <button className="text-orange-700 text-sm hover:text-orange-900">Forgot Password?</button>
                                     <button className="p-2 border w-64 border-gray-500 rounded-md my-1 hover:ring-2 hover:ring-orange-500">
                                         Log in with Google
                                     </button>
